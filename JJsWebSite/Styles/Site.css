@@ -1,0 +1,403 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 0.8em;
+    /* font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Tahoma, Helvetica, Verdana, sans-serif; */
+    margin: 0px;
+    padding: 0px;
+    color: #eee;
+    background: #39312A url('../images/SiteBackground2.jpg') no-repeat;
+    background-attachment: scroll; /* Why is it not workig for horizontal scrolling? */
+}
+
+a:link, a:visited
+{
+    color: #6D82A7;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Calibri;
+    font-size: 3em;
+    color: #c9c9c9;
+    font-variant: normal;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    text-shadow: 0.08em 0.08em 0.1em #3a4f63;
+}
+
+h2
+{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0px; padding: 0px;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.pageborder 
+{
+    margin: 30px 30px 30px 30px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #1A222B;
+    background-color: #39312A;
+}
+
+.page
+{
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.header /* contains title and log in */
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    z-index: 1;
+    background: #4b6c9e;
+    height: 53px;
+    opacity:0.95;
+    filter:alpha(opacity=95);
+}
+
+.title
+{
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.title h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.maincontentborder
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #484848;
+}
+
+.maincontentbordertransparentoverlay 
+{
+    margin: 0px;
+    padding: 0px;
+    background: #39312A url('../images/SiteBackground2.jpg') no-repeat;
+    opacity:0.55;
+    filter:alpha(opacity=55);
+}
+
+.maincontent
+{
+    margin: 0px;
+    padding: 19px 20px 12px 19px;
+    min-height: 320px;
+    text-align: justify;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.maincontent p
+{
+    line-height: 1.7em;
+    padding-left: 20px;
+    padding-right: 6px;
+    margin-bottom: 10px;
+
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+/*
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+*/
+
+/* MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.menu
+{
+    margin: 0px;
+    padding: 3px 3px 3px 3px;
+    letter-spacing: 1px;
+    font-family: Arial;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 2px #4e667d solid;
+    color: #B9C7D2;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    margin: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #566D87;
+    color: #EBEFF3;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #6F8AA6;
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+
+/* LOGIN IN HEADER
+----------------------------------------------------------*/
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+/* PICTURE GALLERY
+----------------------------------------------------------*/
+
+.picturegallery ul
+{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+    padding-top:20px;
+    padding-left: 20px;
+    padding-right: 6px;
+}
+
+.picturegallery li 
+{
+    display:inline;
+}
+
+/* LINKS LIST
+----------------------------------------------------------*/
+
+ul.links
+{
+    list-style-type: none;
+    font-weight:bold;
+    font-family: Calibri;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-left:0px;
+    padding-left:28px;
+}
+
+.links a
+{
+    text-decoration: none;
+}
+
+.links a:hover
+{
+    color: #B9C7D2;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+/* UNUSED
+----------------------------------------------------------*/
+
+/*
+.clear
+{
+    clear: both;
+}
+*/
+
+/*
+.title h1
+{
+ }
+*/
+

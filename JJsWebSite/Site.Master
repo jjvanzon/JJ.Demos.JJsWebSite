@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JJsWebSite.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head runat="server">
+        <title>Jan-Joost van Zon</title>
+        <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="Scripts/jquery.lightbox-0.5.js"></script>
+        <script type="text/javascript">
+            // ...
+        </script>
+        <link rel="stylesheet" type="text/css" href="~/Styles/Site.css" />
+        <link rel="stylesheet" type="text/css" href="Styles/jquery.lightbox-0.5.css" media="screen" />
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form runat="server">
+            <div class="pageborder">
+                <div class="page">
+                    <div class="header">
+                        <div class="title">
+                            <h1>Jan-Joost van Zon</h1>
+                        </div>
+                        <div class="loginDisplay">
+                                (for private features)
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log in</a> ]
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                                    [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="clear hideSkiplink">
+                            <!-- Setting ItemSpacing does not work yet. -->
+                            <asp:Menu
+                                ID="NavigationMenu"
+                                runat="server"
+                                CssClass="menu"
+                                EnableViewState="false"
+                                IncludeStyleBlock="false"
+                                Orientation="Horizontal"
+                                ItemSpacing="4px"
+                                StaticMenuItemStyle-ItemSpacing="20"
+                                DynamicMenuItemStyle-ItemSpacing="20">
+                                <Items>
+                                    <asp:MenuItem Text="Home" NavigateUrl="~/Default.aspx" />
+                                    <asp:MenuItem Text="About" NavigateUrl="~/About.aspx" />
+                                    <asp:MenuItem Text="Work" Enabled="false" />
+                                    <asp:MenuItem Text="Studying" Enabled="false"/>
+                                    <asp:MenuItem Text="Pictures" NavigateUrl="~/Pictures.aspx" />
+                                    <asp:MenuItem Text="Resume" Enabled="false" />
+                                    <asp:MenuItem Text="Links" NavigateUrl="~/Links.aspx" />
+                                    <asp:MenuItem Text="Document Templates" NavigateUrl="~/DocumentTemplates.aspx" />
+                                    <asp:MenuItem Text="Admin" Enabled="false"/>
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </div>
+                    <div class="maincontentborder">
+                        <div class="maincontentbordertransparentoverlay">
+                            <div class="maincontent">
+                                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="clear">
+            </div>
+            <div class="footer">
+            </div>
+            -->
+        </form>
+    </body>
+</html>
